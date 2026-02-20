@@ -20,10 +20,10 @@ nav{
     align-items: center;
     
 }
-nav h1{
+ h1{
     color: #FFFFFF;
 }
-nav h1 span{
+ h1 span{
     background:linear-gradient(0deg,#F7E93F 0%,#FB09B4 51%,#9100F8 100%);
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
@@ -149,4 +149,72 @@ nav .menu a{
     max-width: 1360px;
     margin:84px  auto 0;
     
+}
+.facts-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:80px;
+ text-align: center;
+ 
+ 
+}
+.fact-card{
+    padding-bottom: 60px;
+    padding-top: 80px;
+}
+.fact-number{
+  font-size: 3rem;
+  font-weight: 600;
+color: #00FF88;
+margin-bottom: 16px;
+}
+.fact-card p{
+    color: #FFFFFF;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+/* footer */
+.footer{
+    background-image:url(../assets/footer-bg.png); ;
+}
+.footer-container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    gap:40px;
+}
+.footer h2.logo{
+    font-size: 3.5rem;
+    padding-top: 50px;
+}
+ h2 span{
+    background:linear-gradient(0deg,#F7E93F 0%,#FB09B4 51%,#9100F8 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+}
+h2{
+    color: #FFFFFF;
+}
+.social{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+align-items: center;
+    gap:8px;
+}
+.social a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    
+}
+.social a img{
+    margin-right: 8px;
+    vertical-align: middle;
+}
+.copyright{
+    font-size: 1rem;
+    color: #FFFFFF;
+    padding-bottom: 120px;
 }

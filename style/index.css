@@ -1,3 +1,9 @@
+
+.font-inter{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+ 
+}
 *{
     margin:0;
     padding: 0;
@@ -430,7 +436,7 @@ align-items: center;
 .social a{
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 16px;
+    font-size: 1rem;
     
 }
 .social a img{
@@ -462,7 +468,8 @@ align-items: center;
         top:80px;
         left:0;
         width:100%;
-        background:#1A0B2E;
+          background:#1A0B2E;
+          
         flex-direction: column;
         align-items:center;
         gap:20px;
@@ -661,47 +668,29 @@ align-items: center;
       text-align: center;          /* mobile-friendly padding */
   }
    .icon-img {
-      flex-direction: row;    /* icons row এ থাকবে */
+      flex-direction: row;    
       justify-content: center;
       gap: 12px;
       padding-top: 10px;
   }
-    .footer-container {
-        gap: 20px; /* spacing কমানো */
-        padding: 20px; /* mobile padding */
-    }
-
+  /* footer */
     .footer h2.logo {
         font-size: 2rem;
         padding-top: 20px;
-        text-align: center;
     }
-
-    .social {
+   .social {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 per row */
-        gap: 12px;
-        justify-items: center;
-        align-items: center;
+        grid-template-columns: repeat(2, 1fr); 
+       
     }
-
-    .social a {
-        font-size: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
+   .social a {
+        
+        gap: 8px;
     }
-
-    .social a img {
-        width: 20px;  /* icon smaller */
-        height: 20px;
-        margin: 0;     /* remove right margin, gap handles spacing */
-    }
-
-    .copyright {
+  .copyright {
         font-size: 0.85rem;
         text-align: center;
         padding-bottom: 40px;
     }
+   
 }

@@ -16,17 +16,20 @@ header{
   
     
 }
+.head hr{
+    color: #412567;
+}
 nav{
     width:100%;
     max-width: 1600px;
     height: 92px;
-    /* border:1px solid red; */
+
     margin:0 auto;
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center; 
     
-    
+   
 }
  h1{
     color: #FFFFFF;
@@ -76,8 +79,9 @@ nav .menu a{
     height: auto;
 }
 .subscribe{
-    display: none;
+    margin-left: 100px;
 }
+/* */
  /* banner */
  #banner{
   background-image: url(../assets/hero-bg.png);
@@ -135,7 +139,6 @@ nav .menu a{
 }
 .button-content{
     display: flex;
-    /* margin: 0 auto; */
     justify-content:center;
     gap:16px;
     margin-top: 20px;
@@ -167,7 +170,7 @@ nav .menu a{
 
     background: #00FF88;
     color: #000;
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 20px;
@@ -213,7 +216,7 @@ nav .menu a{
 .about-heading p{
     color: #FFFFFF;
     text-align: center;
-     max-width: 700px;         /* প্যারাগ্রাফের বেশি width হলে wrap হবে */
+     max-width: 700px;        
     margin: 0 auto;  
     line-height: 20px;
 }
@@ -266,7 +269,7 @@ margin-bottom: 16px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
-gap: 15px;
+    gap: 15px;
 }
 .why{
     color: #FFFFFF;
@@ -303,13 +306,20 @@ gap: 15px;
       grid-column:span 1;
        background-color: #351165;
 } 
-
+.gradient-icon{
+    
+     background:linear-gradient(45deg,#F7E93F 30%,#FB09B4 60%,#9100F8 100%);
+     -webkit-background-clip:text;
+    
+    color: transparent;
+    display: inline-block;
+    font-size: 50px;
+    padding-bottom: 20px;
+}
 /* feature part */
 .featured{
     background-color: #1A0B2E;
-    color:#FFFFFF;
-    
-   
+    color:#FFFFFF;  
    
 }
 .container{
@@ -328,7 +338,7 @@ gap: 15px;
     
   } 
   .card{
-    /* padding: 20px; */
+  
     border-radius: 8%;
     background-color: #250D44;
     width: 380px;
@@ -468,27 +478,29 @@ align-items: center;
         justify-content: space-between;
         position:relative;
     } 
-    /* hamburger show */
+
     .hamburger{
-        display: block;
-        
+        display: block;   
     }
 
     /* menu hide first */
-    ul.menu{
+     
+        ul.menu{
         position:absolute;
-        top:80px;
-        left:0;
-        width:100%;
-          background:#1A0B2E;
-
-        flex-direction: column;
-        align-items:center;
-        gap:20px;
-        padding:20px 0;
+        top:92px;              /* nav height */
+        right:20px;            /* right side থেকে open হবে */
+        width:250px;           /* box width */
+        background:#250D44;    /* custom background */
+        border-radius:12px;
+        padding:20px;
         display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:20px;
+
+        box-shadow:0 15px 40px rgba(0,0,0,0.4);
+        z-index:999;           
     }
-      
 
     /* checkbox checked হলে show */
     #menu-toggle:checked ~ ul.menu{
@@ -499,45 +511,42 @@ align-items: center;
     .subscribe{
         display:block;
     }
+
+
     /* banner */
    
   
  #banner {
-        background-position: center top; /* ব্যাকগ্রাউন্ড সামঞ্জস্য */
-        min-height: 40vh; /* একটু ছোট উচ্চতা */
-        padding-top: 50px; /* উপরের প্যাডিং কমানো */
+        background-position: center top; 
+        min-height: 40vh; 
+        padding-top: 50px;
     }
 
     .banner-content {
         text-align: center;
-        padding: 0 10px; /* সাইডে ছোট প্যাডিং */
+        padding: 0 10px; 
     }
 
     .parent {
-        width: 240px; /* ছোট করে দাও */
+        width: 240px; 
         height: 240px;
     }
   
     .icon {
-        width: 80px; /* ছোট আইকন */
+        width: 80px; 
     }
 
     .text h1 {
-        font-size: 32px; /* হেডিং ছোট করা */
+        font-size: 32px; 
         margin-top: 20px;
     }
 
     .text p {
-        font-size: 14px; /* প্যারাগ্রাফ ছোট করা */
+        font-size: 14px; 
         margin-top: 8px;
     }
 
-    .button-content {
-        flex-direction: column; /* বাটনগুলো এক লাইনে না, নিচে আসে */
-        gap: 12px;
-        margin-top: 15px;
-        padding-bottom: 50px; /* নিচের প্যাডিং কমানো */
-    }
+    
 
     .btn1 {
         font-size: 14px;
@@ -545,10 +554,8 @@ align-items: center;
     }
 
     .badge {
-        top: 10px;
         right: 20px;
-        font-size: 10px;
-        padding: 3px 8px;
+          padding: 3px 8px;
     }
     /* about */
      .about-heading h1 {
@@ -562,18 +569,16 @@ align-items: center;
         
     }
       .facts-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        gap: 20px; /* gap কমিয়ে দাও */
-        padding: 0 10px; /* sides padding */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px; 
+        
+      
     }
 
-    .fact-card {
-        padding-top: 40px;
-        padding-bottom: 40px;
-    }
-
+    
     .fact-number {
-        font-size: 2rem; /* smaller number */
+        font-size: 2rem; 
         margin-bottom: 12px;
     }
 
@@ -582,7 +587,7 @@ align-items: center;
     }
     /* choose part */
      .content1 {
-        padding: 40px 20px; /* sides padding কমানো */
+        padding: 40px 20px; 
     }
 
     .content1 h3 {
@@ -592,16 +597,16 @@ align-items: center;
 
     .grid {
         display: grid;
-        grid-template-columns: 1fr; /* এক column */
-        grid-template-rows: auto;   /* auto height */
-        gap: 20px;                  /* boxes এর মধ্যে gap */
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;   
+        gap: 20px;                 
     }
 
     .why, .box, .box-1, .box-2, .box-3 {
-        grid-column: span 1 !important; /* override desktop spans */
+        grid-column: span 1 !important; 
         grid-row: auto !important;
-        padding: 40px 20px;             /* padding কমানো */
-        /* text-align: center;          */
+        padding: 40px 20px;             
+                
     }
 
     .why h4 {
@@ -615,32 +620,32 @@ align-items: center;
     }
 
     .box-1, .box-2, .box-3, .box {
-        border-radius: 20px; /* mobile এ একটু ছোট করলাম */
+        border-radius: 20px; 
     }
 
     .box-1 img, .box-3 img, .box img {
-        max-width: 60px; /* mobile এ icon ছোট */
+        max-width: 60px;
         margin-bottom: 12px;
     }
     /* feature */
     .container {
-        padding: 40px 20px; /* sides padding কমানো */
+        padding: 40px 20px;
     }
 
     .featured h2 {
-        font-size: 2rem;    /* smaller heading */
-        padding-bottom: 20px;
+        font-size: 2rem;    
+        padding-bottom: 30px;
     }
 
     .episodes {
         display: grid;
-        grid-template-columns: 1fr; /* এক লাইনে 1 card */
-        gap: 20px;                  /* card এর মধ্যে gap */
-        justify-items: center;      /* center-align cards */
+        grid-template-columns: 1fr; 
+        gap: 20px;                  
+        justify-items: center;      
     }
 
     .card {
-        width: 100%;           /* container width অনুযায়ী adjust হবে */
+        width: 100%;          
         border-radius: 8%;     
         overflow: hidden;
     }
@@ -664,20 +669,19 @@ align-items: center;
     }
 
     .card iframe {
-        width: 100%;  /* iframe full width */
-        height: auto; /* height auto, responsive */
-        display: block;
+        width: 100%;  
+      
     }
     /* meet  */
     .alex {
-      padding: 40px 20px;  /* sides & top-bottom padding কমানো */
+      padding: 40px 20px;  
   }
     .meet {
-      flex-direction: column;  /* row থেকে column */
-      align-items: center;     /* center-align content */
-      gap: 20px;               /* element এর মধ্যে gap */
+      flex-direction: column; 
+      align-items: center;     
+      gap: 20px;              
       padding: 20px; 
-      text-align: center;          /* mobile-friendly padding */
+      text-align: center;         
   }
    .icon-img {
       flex-direction: row;    
@@ -685,6 +689,9 @@ align-items: center;
       gap: 12px;
       padding-top: 10px;
   }
+  .host h3{
+    font-size: 2rem;
+   }
   /* footer */
     .footer h2.logo {
         font-size: 2rem;
@@ -706,3 +713,5 @@ align-items: center;
     }
    
 }
+
+

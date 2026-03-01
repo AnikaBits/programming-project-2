@@ -79,7 +79,7 @@ nav .menu a{
     height: auto;
 }
 .subscribe{
-    margin-left: 100px;
+    margin-left: auto;
 }
 /* */
  /* banner */
@@ -487,10 +487,10 @@ align-items: center;
      
         ul.menu{
         position:absolute;
-        top:92px;              /* nav height */
-        right:20px;            /* right side থেকে open হবে */
-        width:250px;           /* box width */
-        background:#250D44;    /* custom background */
+        top:92px;              
+        right:20px;         
+        width:250px;           
+        background:#250D44;    
         border-radius:12px;
         padding:20px;
         display:none;
@@ -502,12 +502,11 @@ align-items: center;
         z-index:999;           
     }
 
-    /* checkbox checked হলে show */
+    
     #menu-toggle:checked ~ ul.menu{
         display:flex;
     }
 
-    /* subscribe button hide */
     .subscribe{
         display:block;
     }
